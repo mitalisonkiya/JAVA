@@ -1,0 +1,39 @@
+import java.util.Arrays;
+
+class Employee {
+    String name;
+    String dateOfAppointment; 
+
+    public Employee(String name, String dateOfAppointment) {
+        this.name = name;
+        this.dateOfAppointment = dateOfAppointment;
+    }
+
+    public void display() {
+        System.out.println("Name: " + name + ", Date of Appointment: " + dateOfAppointment);
+    }
+
+    public static void sortBySeniority(Employee[] employees) {
+        Arrays.sort(employees, (emp1, emp2) -> emp1.dateOfAppointment.compareTo(emp2.dateOfAppointment));
+    }
+
+    public static void main(String[] args) {
+        Employee[] employees = new Employee[10];
+        employees[0] = new Employee("Alice", "2022-03-15");
+        employees[1] = new Employee("Bob", "2020-11-30");
+        employees[2] = new Employee("Charlie", "2021-05-22");
+        employees[3] = new Employee("David", "2019-08-01");
+        employees[4] = new Employee("Eva", "2021-01-12");
+        employees[5] = new Employee("Frank", "2020-06-25");
+        employees[6] = new Employee("Grace", "2018-10-17");
+        employees[7] = new Employee("Hank", "2023-07-09");
+        employees[8] = new Employee("Ivy", "2019-12-03");
+        employees[9] = new Employee("Jack", "2021-09-14");
+
+        Employee.sortBySeniority(employees);
+        System.out.println("Employees sorted by seniority:");
+        for (Employee emp : employees) {
+            emp.display();
+        }
+    }
+}
