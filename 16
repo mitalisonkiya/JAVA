@@ -1,0 +1,19 @@
+class Main {
+    public static void main(String[] args) {
+        try {
+            int[] array = new int[5];
+            array[5] = 30 / 0;  // This line will throw an exception
+        } 
+        catch (ArithmeticException e) {
+            System.out.println("Arithmetic Exception: Division by zero.");
+        } 
+        catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Array Index Out Of Bounds Exception: Array index is out of range.");
+        } 
+        catch (Exception e) {
+            System.out.println("General Exception: Something went wrong.");
+        }
+        
+        System.out.println("Rest of the code...");
+    }
+}
