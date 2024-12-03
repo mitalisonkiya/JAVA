@@ -1,0 +1,24 @@
+public class PrimeNumbersExample {
+    public static void main(String[] args) {
+        System.out.println("Prime numbers between 1 and 50 are:");
+        
+        try {
+            for (int i = 2; i <= 50; i++) {
+                if (isPrime(i)) {
+                    System.out.print(i + " ");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } finally {
+            System.out.println("\nExecution completed.");
+        }
+    }
+
+    public static boolean isPrime(int n) {
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
+        }
+        return true;
+    }
+}
