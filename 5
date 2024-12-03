@@ -1,0 +1,19 @@
+class Car {
+    
+    private String brand;
+    private String model;
+
+    public Car() {
+        this.brand = "Toyota"; 
+        this.model = "Camry";  
+    }
+
+    public void displayCarDetails() {
+        System.out.println("Car Brand: " + brand);
+        System.out.println("Car Model: " + model);
+    }
+    public static void main(String[] args) {
+        Car myCar = new Car(); 
+        myCar.displayCarDetails(); 
+    }
+}
