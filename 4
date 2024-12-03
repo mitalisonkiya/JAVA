@@ -1,0 +1,31 @@
+interface Animal {
+    void eat();
+}
+
+interface Mammal {
+    void walk();
+}
+
+interface Dog extends Animal, Mammal {
+    void bark();
+}
+
+class Bulldog implements Dog {
+    public void eat() { System.out.println("Eating"); }
+    public void walk() { System.out.println("Walking"); }
+    public void bark() { System.out.println("Barking"); }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Dog myDog = new Bulldog();
+        myDog.eat();
+        myDog.walk();
+        myDog.bark();
+    }
+}
+
+Output 
+Eating
+Walking
+Barking
